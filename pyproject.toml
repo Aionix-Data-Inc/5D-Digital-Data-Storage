@@ -24,3 +24,6 @@ Homepage = "https://example.com/5d-digital-data-storage"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
+
+[project.scripts]
+host-writer = "host_writer.__main__:main"
