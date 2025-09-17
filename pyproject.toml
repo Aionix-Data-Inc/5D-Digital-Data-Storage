@@ -27,3 +27,8 @@ pythonpath = ["src"]
 
 [project.scripts]
 host-writer = "host_writer.__main__:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7",
+]
