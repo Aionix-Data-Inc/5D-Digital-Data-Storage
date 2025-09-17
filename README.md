@@ -1,4 +1,4 @@
-# 5D-Digital-Data-Storage
+# 5D Optical Data Storage
 
 This repository contains a Python simulation of a five-dimensional (3D position, light intensity, and polarization) data storage platform inspired by femtosecond-laser writing in nanostructured glass. The codebase models the **write** and **read** pipelines, includes error-correction, and exposes utilities for injecting realistic measurement noise.
 
