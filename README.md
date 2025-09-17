@@ -58,3 +58,26 @@ pytest
 ```
 
 The test-suite exercises noise-free and noisy readbacks as well as capacity validation for oversized payloads.
+
+## Host Writer Orchestrator (New)
+
+A minimal host-side orchestrator is provided in `host_writer` to demonstrate a higher-level pipeline (optional scrambling → write → verify):
+
+CLI usage:
+
+```bash
+host-writer "hello 5d"
+host-writer "payload" --grid 8x8x2 --levels 4x8 --no-scramble
+```
+
+Programmatic example:
+
+```python
+from host_writer import HostWriter
+
+hw = HostWriter(grid_size=(8, 8, 2), intensity_levels=4, polarization_states=4)
+data = b"hello host writer"
+pattern = hw.write(data)
+rb = hw.verify(pattern)
+assert rb.data == data
+```
