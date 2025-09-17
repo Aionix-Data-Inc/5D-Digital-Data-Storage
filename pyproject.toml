@@ -3,7 +3,7 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "optical-storage"
+name = "5d-optical-data-storage"
 version = "0.1.0"
 description = "Simulation platform for 5D femtosecond-laser data storage"
 readme = "README.md"
