@@ -1,7 +1,17 @@
-# 5D-Digital-Data-Storage
+Metadata-Version: 2.4
+Name: optical-storage
+Version: 0.1.0
+Summary: Simulation platform for 5D femtosecond-laser data storage
+Author: 5D Storage Contributors
+License: MIT
+Project-URL: Homepage, https://example.com/5d-digital-data-storage
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
 
-[![CI](https://github.com/Aionix-Data-Inc/5D-Digital-Data-Storage/actions/workflows/ci.yml/badge.svg)](https://github.com/Aionix-Data-Inc/5D-Digital-Data-Storage/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/Aionix-Data-Inc/5D-Digital-Data-Storage/actions/workflows/codeql.yml/badge.svg)](https://github.com/Aionix-Data-Inc/5D-Digital-Data-Storage/actions/workflows/codeql.yml)
+# 5D-Digital-Data-Storage
 
 This repository contains a Python simulation of a five-dimensional (3D position, light intensity, and polarization) data storage platform inspired by femtosecond-laser writing in nanostructured glass. The codebase models the **write** and **read** pipelines, includes error-correction, and exposes utilities for injecting realistic measurement noise.
 
