@@ -1,0 +1,12 @@
+# Bandit security configuration
+# Suppress known false positives and configure security scan parameters
+
+[bandit]
+# Tests to skip (e.g., assert_used is flagged but acceptable in tests)
+skips = B101
+
+# Exclude test files and build directories from scan
+exclude_dirs = ['.venv', 'build', 'dist', '*.egg-info', '__pycache__']
+
+[bandit:assert_used]
+# Allow assert in test files - set skips in test section instead

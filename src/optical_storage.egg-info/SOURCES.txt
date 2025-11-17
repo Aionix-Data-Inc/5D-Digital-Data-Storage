@@ -5,6 +5,7 @@ src/optical_storage/bit_utils.py
 src/optical_storage/error_correction.py
 src/optical_storage/noise.py
 src/optical_storage/reader.py
+src/optical_storage/security.py
 src/optical_storage/storage_pattern.py
 src/optical_storage/voxel.py
 src/optical_storage/writer.py

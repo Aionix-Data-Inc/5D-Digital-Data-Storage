@@ -1,0 +1,225 @@
++ set -euo pipefail
++++ dirname scripts/run_security_checks.sh
+++ cd scripts/..
+++ pwd
++ ROOT_DIR=/workspaces/5D-Digital-Data-Storage
++ cd /workspaces/5D-Digital-Data-Storage
++ VENV_DIR=.venv
++ echo '[security-checks] workspace: /workspaces/5D-Digital-Data-Storage'
+[security-checks] workspace: /workspaces/5D-Digital-Data-Storage
+++ command -v python3
++ PYTHON_CMD=/workspaces/5D-Digital-Data-Storage/.venv/bin/python3
++ '[' -z /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 ']'
++ '[' -d .venv ']'
++ echo '[security-checks] reusing existing virtualenv at .venv'
+[security-checks] reusing existing virtualenv at .venv
++ source .venv/bin/activate
+++ deactivate nondestructive
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
+++ '[' -n '' ']'
+++ unset VIRTUAL_ENV
+++ unset VIRTUAL_ENV_PROMPT
+++ '[' '!' nondestructive = nondestructive ']'
+++ '[' linux-gnu = cygwin ']'
+++ '[' linux-gnu = msys ']'
+++ export VIRTUAL_ENV=/workspaces/5D-Digital-Data-Storage/.venv
+++ VIRTUAL_ENV=/workspaces/5D-Digital-Data-Storage/.venv
+++ _OLD_VIRTUAL_PATH=/workspaces/5D-Digital-Data-Storage/.venv/bin:/usr/local/rvm/gems/ruby-3.4.1/bin:/usr/local/rvm/gems/ruby-3.4.1@global/bin:/usr/local/rvm/rubies/ruby-3.4.1/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/ac4cbdf48759c7d8c3eb91ffe6bb04316e263c57/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v22.21.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin:/home/codespace/.vscode-remote/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts
+++ PATH=/workspaces/5D-Digital-Data-Storage/.venv/bin:/workspaces/5D-Digital-Data-Storage/.venv/bin:/usr/local/rvm/gems/ruby-3.4.1/bin:/usr/local/rvm/gems/ruby-3.4.1@global/bin:/usr/local/rvm/rubies/ruby-3.4.1/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/ac4cbdf48759c7d8c3eb91ffe6bb04316e263c57/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v22.21.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin:/home/codespace/.vscode-remote/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts
+++ export PATH
+++ '[' -n '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ PS1='(.venv) '
+++ export PS1
+++ VIRTUAL_ENV_PROMPT='(.venv) '
+++ export VIRTUAL_ENV_PROMPT
+++ hash -r
++ echo '[security-checks] upgrading pip/tools'
+[security-checks] upgrading pip/tools
++ /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip install --upgrade pip setuptools wheel
+Requirement already satisfied: pip in ./.venv/lib/python3.12/site-packages (25.3)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.12/site-packages (80.9.0)
+Requirement already satisfied: wheel in ./.venv/lib/python3.12/site-packages (0.45.1)
++ '[' -f requirements-dev.txt ']'
++ /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip install -r requirements-dev.txt
+Collecting pytest==7.4.2 (from -r requirements-dev.txt (line 1))
+  Using cached pytest-7.4.2-py3-none-any.whl.metadata (7.9 kB)
+Collecting bandit==1.7.5 (from -r requirements-dev.txt (line 2))
+  Using cached bandit-1.7.5-py3-none-any.whl.metadata (5.0 kB)
+ERROR: Ignored the following yanked versions: 2.4.15
+ERROR: Could not find a version that satisfies the requirement pip-audit==2.2.2 (from versions: 0.0.1b0, 0.0.1rc0, 0.0.1rc1, 0.0.1rc2, 0.0.1, 0.0.2, 0.0.3, 0.0.4, 0.0.5, 0.0.6, 0.0.7, 0.0.8, 0.0.9, 1.0.0, 1.0.1, 1.1.0, 1.1.1, 1.1.2, 2.0.0, 2.1.0, 2.1.1, 2.2.0, 2.2.1, 2.3.0, 2.3.1, 2.3.2, 2.3.3, 2.3.4, 2.4.0, 2.4.1, 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 2.4.8, 2.4.9, 2.4.10, 2.4.11, 2.4.12, 2.4.13, 2.4.14, 2.5.0, 2.5.1, 2.5.2, 2.5.3, 2.5.4, 2.5.5, 2.5.6, 2.6.0, 2.6.1, 2.6.2, 2.6.3, 2.7.0, 2.7.1, 2.7.2, 2.7.3, 2.8.0, 2.9.0)
+ERROR: No matching distribution found for pip-audit==2.2.2
++ /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip install pytest bandit
+Requirement already satisfied: pytest in ./.venv/lib/python3.12/site-packages (9.0.1)
+Requirement already satisfied: bandit in ./.venv/lib/python3.12/site-packages (1.8.6)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.12/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.12/site-packages (from pytest) (25.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest) (2.19.2)
+Requirement already satisfied: PyYAML>=5.3.1 in ./.venv/lib/python3.12/site-packages (from bandit) (6.0.3)
+Requirement already satisfied: stevedore>=1.20.0 in ./.venv/lib/python3.12/site-packages (from bandit) (5.5.0)
+Requirement already satisfied: rich in ./.venv/lib/python3.12/site-packages (from bandit) (14.2.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.12/site-packages (from rich->bandit) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich->bandit) (0.1.2)
++ /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip install pip-audit
+Requirement already satisfied: pip-audit in ./.venv/lib/python3.12/site-packages (2.9.0)
+Requirement already satisfied: CacheControl>=0.13.0 in ./.venv/lib/python3.12/site-packages (from CacheControl[filecache]>=0.13.0->pip-audit) (0.14.4)
+Requirement already satisfied: cyclonedx-python-lib<10,>=5 in ./.venv/lib/python3.12/site-packages (from pip-audit) (9.1.0)
+Requirement already satisfied: packaging>=23.0.0 in ./.venv/lib/python3.12/site-packages (from pip-audit) (25.0)
+Requirement already satisfied: pip-api>=0.0.28 in ./.venv/lib/python3.12/site-packages (from pip-audit) (0.0.34)
+Requirement already satisfied: pip-requirements-parser>=32.0.0 in ./.venv/lib/python3.12/site-packages (from pip-audit) (32.0.1)
+Requirement already satisfied: requests>=2.31.0 in ./.venv/lib/python3.12/site-packages (from pip-audit) (2.32.5)
+Requirement already satisfied: rich>=12.4 in ./.venv/lib/python3.12/site-packages (from pip-audit) (14.2.0)
+Requirement already satisfied: toml>=0.10 in ./.venv/lib/python3.12/site-packages (from pip-audit) (0.10.2)
+Requirement already satisfied: platformdirs>=4.2.0 in ./.venv/lib/python3.12/site-packages (from pip-audit) (4.5.0)
+Requirement already satisfied: license-expression<31,>=30 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (30.4.4)
+Requirement already satisfied: packageurl-python<2,>=0.11 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (0.17.5)
+Requirement already satisfied: py-serializable<3.0.0,>=2.0.0 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (2.1.0)
+Requirement already satisfied: sortedcontainers<3.0.0,>=2.4.0 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (2.4.0)
+Requirement already satisfied: boolean.py>=4.0 in ./.venv/lib/python3.12/site-packages (from license-expression<31,>=30->cyclonedx-python-lib<10,>=5->pip-audit) (5.0)
+Requirement already satisfied: defusedxml<0.8.0,>=0.7.1 in ./.venv/lib/python3.12/site-packages (from py-serializable<3.0.0,>=2.0.0->cyclonedx-python-lib<10,>=5->pip-audit) (0.7.1)
+Requirement already satisfied: msgpack<2.0.0,>=0.5.2 in ./.venv/lib/python3.12/site-packages (from CacheControl>=0.13.0->CacheControl[filecache]>=0.13.0->pip-audit) (1.1.2)
+Requirement already satisfied: filelock>=3.8.0 in ./.venv/lib/python3.12/site-packages (from CacheControl[filecache]>=0.13.0->pip-audit) (3.20.0)
+Requirement already satisfied: pip in ./.venv/lib/python3.12/site-packages (from pip-api>=0.0.28->pip-audit) (25.3)
+Requirement already satisfied: pyparsing in ./.venv/lib/python3.12/site-packages (from pip-requirements-parser>=32.0.0->pip-audit) (3.2.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests>=2.31.0->pip-audit) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests>=2.31.0->pip-audit) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.12/site-packages (from requests>=2.31.0->pip-audit) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.12/site-packages (from requests>=2.31.0->pip-audit) (2025.11.12)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.12/site-packages (from rich>=12.4->pip-audit) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in ./.venv/lib/python3.12/site-packages (from rich>=12.4->pip-audit) (2.19.2)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=12.4->pip-audit) (0.1.2)
++ echo '[security-checks] installing package in editable mode'
+[security-checks] installing package in editable mode
++ /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip install -e .
+Obtaining file:///workspaces/5D-Digital-Data-Storage
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: optical-storage
+  Building editable for optical-storage (pyproject.toml): started
+  Building editable for optical-storage (pyproject.toml): finished with status 'done'
+  Created wheel for optical-storage: filename=optical_storage-0.1.1-0.editable-py3-none-any.whl size=2817 sha256=3c1dcfa44a8522db04b068efdc0cd0cfb071c644322405869dc426c9bb266a56
+  Stored in directory: /tmp/pip-ephem-wheel-cache-rcrhnhri/wheels/ba/6a/4d/81e6420f1486392e70fea5a90581dc1754ca8f5f02e77dcc6e
+Successfully built optical-storage
+Installing collected packages: optical-storage
+  Attempting uninstall: optical-storage
+    Found existing installation: optical-storage 0.1.1
+    Uninstalling optical-storage-0.1.1:
+      Successfully uninstalled optical-storage-0.1.1
+Successfully installed optical-storage-0.1.1
++ echo '[security-checks] running pytest'
+[security-checks] running pytest
++ /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pytest -q
+
+==================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_ecc_example.py __________________
+.venv/lib/python3.12/site-packages/_pytest/python.py:507: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/local/python/3.12.1/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:188: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/python/3.12.1/lib/python3.12/ast.py:52: in parse
+    return compile(source, filename, mode, flags,
+E     File "/workspaces/5D-Digital-Data-Storage/tests/test_ecc_example.py", line 32
+E       *** End Patch
+E       ^^
+E   SyntaxError: invalid syntax
+______________ ERROR collecting tests/test_storage_pattern_io.py _______________
+.venv/lib/python3.12/site-packages/_pytest/python.py:507: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/local/python/3.12.1/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:188: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/python/3.12.1/lib/python3.12/ast.py:52: in parse
+    return compile(source, filename, mode, flags,
+E     File "/workspaces/5D-Digital-Data-Storage/tests/test_storage_pattern_io.py", line 26
+E       *** End Patch
+E       ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/test_ecc_example.py
+ERROR tests/test_storage_pattern_io.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+2 errors in 0.57s
++ echo '[security-checks] pytest failed'
+[security-checks] pytest failed
++ echo '[security-checks] running Bandit (static scan)'
+[security-checks] running Bandit (static scan)
++ /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m bandit -r src/optical_storage -ll
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.12.1
+Run started:2025-11-17 11:25:07.432195
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 573
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 1
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 1
+Files skipped (0):
++ echo '[security-checks] running pip-audit'
+[security-checks] running pip-audit
++ /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip_audit --progress off
+No known vulnerabilities found
+Name            Skip Reason
+--------------- ------------------------------------------------------------------------------
+optical-storage Dependency not found on PyPI and could not be audited: optical-storage (0.1.1)
++ echo '[security-checks] done'
+[security-checks] done

@@ -1,0 +1,25 @@
+name: Create release on tag
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create Draft Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: true
+          prerelease: false
+          body: |
+            Automated draft release for ${{ github.ref_name }}.
+            
+            - Contains security hardening, CI, and serialization improvements.
