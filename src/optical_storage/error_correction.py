@@ -82,3 +82,42 @@ class Hamming74(ErrorCorrectionScheme):
 
     def metadata(self) -> Dict[str, int]:
         return {"data_bits_per_block": 4, "encoded_bits_per_block": 7}
+
+
+class Parity8(ErrorCorrectionScheme):
+    """Simple parity scheme that appends a single parity bit for every 8 data bits.
+
+    This is intended as a small example ECC: it can *detect* single-bit errors
+    in an 8-bit block but cannot correct them.
+    """
+
+    name = "parity8"
+
+    def encode(self, bits: Sequence[int]) -> List[int]:
+        encoded: List[int] = []
+        for block in chunk_bits(bits, 8, pad=True):
+            parity = 0
+            for b in block:
+                parity ^= (b & 0x1)
+            encoded.extend([b & 0x1 for b in block])
+            encoded.append(parity & 0x1)
+        return encoded
+
+    def decode(self, bits: Sequence[int]) -> DecodingResult:
+        decoded: List[int] = []
+        detected = 0
+        for block in chunk_bits(bits, 9, pad=True):
+            if len(block) < 9:
+                block.extend([0] * (9 - len(block)))
+            data = block[:8]
+            parity = block[8] & 0x1
+            calc = 0
+            for b in data:
+                calc ^= (b & 0x1)
+            if calc != parity:
+                detected += 1
+            decoded.extend([b & 0x1 for b in data])
+        return DecodingResult(bits=decoded, corrected_errors=0, detected_uncorrectable=detected)
+
+    def metadata(self) -> Dict[str, int]:
+        return {"data_bits_per_block": 8, "encoded_bits_per_block": 9}
