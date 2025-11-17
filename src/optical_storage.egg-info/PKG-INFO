@@ -25,6 +25,10 @@ This repository contains a Python simulation of a five-dimensional (3D position,
 * Hamming(7,4) and passthrough error-correction implementations.
 * Noise helpers to simulate laser writing/reading imperfections.
 * Example script demonstrating an end-to-end round-trip with noise.
+* `Parity8` example ECC (parity per 8 data bits) added as a demonstration.
+* `StoragePattern` JSON serialization helpers (`to_dict` / `from_dict`).
+* Security tooling: Bandit and CodeQL workflows, `scripts/run_security_checks.sh`, and `scripts/audit_security.sh` for local audits.
+* Pinned dev dependencies and `tox.ini` for reproducible test/security runs.
 
 ## Getting Started
 
