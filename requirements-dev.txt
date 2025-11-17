@@ -1,4 +1,4 @@
 pytest==7.4.2
-bandit==1.7.5
+bandit==1.8.6
 pip-audit==2.2.2
 # Add linters such as ruff/flake8 if desired (pin them when added)
