@@ -54,13 +54,13 @@ ERROR: Could not find a version that satisfies the requirement pip-audit==2.2.2 
 ERROR: No matching distribution found for pip-audit==2.2.2
 + /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip install pytest bandit
 Requirement already satisfied: pytest in ./.venv/lib/python3.12/site-packages (9.0.1)
-Requirement already satisfied: bandit in ./.venv/lib/python3.12/site-packages (1.8.6)
+Requirement already satisfied: bandit in ./.venv/lib/python3.12/site-packages (1.9.2)
 Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.12/site-packages (from pytest) (2.3.0)
 Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.12/site-packages (from pytest) (25.0)
 Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest) (1.6.0)
 Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest) (2.19.2)
 Requirement already satisfied: PyYAML>=5.3.1 in ./.venv/lib/python3.12/site-packages (from bandit) (6.0.3)
-Requirement already satisfied: stevedore>=1.20.0 in ./.venv/lib/python3.12/site-packages (from bandit) (5.5.0)
+Requirement already satisfied: stevedore>=1.20.0 in ./.venv/lib/python3.12/site-packages (from bandit) (5.6.0)
 Requirement already satisfied: rich in ./.venv/lib/python3.12/site-packages (from bandit) (14.2.0)
 Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.12/site-packages (from rich->bandit) (4.0.0)
 Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich->bandit) (0.1.2)
@@ -76,7 +76,7 @@ Requirement already satisfied: rich>=12.4 in ./.venv/lib/python3.12/site-package
 Requirement already satisfied: toml>=0.10 in ./.venv/lib/python3.12/site-packages (from pip-audit) (0.10.2)
 Requirement already satisfied: platformdirs>=4.2.0 in ./.venv/lib/python3.12/site-packages (from pip-audit) (4.5.0)
 Requirement already satisfied: license-expression<31,>=30 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (30.4.4)
-Requirement already satisfied: packageurl-python<2,>=0.11 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (0.17.5)
+Requirement already satisfied: packageurl-python<2,>=0.11 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (0.17.6)
 Requirement already satisfied: py-serializable<3.0.0,>=2.0.0 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (2.1.0)
 Requirement already satisfied: sortedcontainers<3.0.0,>=2.4.0 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (2.4.0)
 Requirement already satisfied: boolean.py>=4.0 in ./.venv/lib/python3.12/site-packages (from license-expression<31,>=30->cyclonedx-python-lib<10,>=5->pip-audit) (5.0)
@@ -107,8 +107,8 @@ Obtaining file:///workspaces/5D-Digital-Data-Storage
 Building wheels for collected packages: optical-storage
   Building editable for optical-storage (pyproject.toml): started
   Building editable for optical-storage (pyproject.toml): finished with status 'done'
-  Created wheel for optical-storage: filename=optical_storage-0.1.1-0.editable-py3-none-any.whl size=2969 sha256=f2d5eb5f3a4dd9fdb77bf401451f33faa3611621099ff0e029e424e58ee7b1d3
-  Stored in directory: /tmp/pip-ephem-wheel-cache-u0urjuou/wheels/ba/6a/4d/81e6420f1486392e70fea5a90581dc1754ca8f5f02e77dcc6e
+  Created wheel for optical-storage: filename=optical_storage-0.1.1-0.editable-py3-none-any.whl size=2969 sha256=ca559fd558f3975c6978ae35034dc6613e1743322b2f9a4960e6a268dd9365ab
+  Stored in directory: /tmp/pip-ephem-wheel-cache-btgmktar/wheels/ba/6a/4d/81e6420f1486392e70fea5a90581dc1754ca8f5f02e77dcc6e
 Successfully built optical-storage
 Installing collected packages: optical-storage
   Attempting uninstall: optical-storage
@@ -126,7 +126,7 @@ __________________ ERROR collecting tests/test_ecc_example.py __________________
     mod = import_path(
 .venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
     importlib.import_module(module_name)
-/usr/local/python/3.12.1/lib/python3.12/importlib/__init__.py:90: in import_module
+/home/codespace/.python/current/lib/python3.12/importlib/__init__.py:90: in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 <frozen importlib._bootstrap>:1387: in _gcd_import
@@ -143,7 +143,7 @@ __________________ ERROR collecting tests/test_ecc_example.py __________________
 .venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
     tree = ast.parse(source, filename=strfn)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-/usr/local/python/3.12.1/lib/python3.12/ast.py:52: in parse
+/home/codespace/.python/current/lib/python3.12/ast.py:52: in parse
     return compile(source, filename, mode, flags,
 E     File "/workspaces/5D-Digital-Data-Storage/tests/test_ecc_example.py", line 32
 E       *** End Patch
@@ -154,7 +154,7 @@ ______________ ERROR collecting tests/test_storage_pattern_io.py _______________
     mod = import_path(
 .venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
     importlib.import_module(module_name)
-/usr/local/python/3.12.1/lib/python3.12/importlib/__init__.py:90: in import_module
+/home/codespace/.python/current/lib/python3.12/importlib/__init__.py:90: in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 <frozen importlib._bootstrap>:1387: in _gcd_import
@@ -171,7 +171,7 @@ ______________ ERROR collecting tests/test_storage_pattern_io.py _______________
 .venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
     tree = ast.parse(source, filename=strfn)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-/usr/local/python/3.12.1/lib/python3.12/ast.py:52: in parse
+/home/codespace/.python/current/lib/python3.12/ast.py:52: in parse
     return compile(source, filename, mode, flags,
 E     File "/workspaces/5D-Digital-Data-Storage/tests/test_storage_pattern_io.py", line 26
 E       *** End Patch
@@ -181,7 +181,7 @@ E   SyntaxError: invalid syntax
 ERROR tests/test_ecc_example.py
 ERROR tests/test_storage_pattern_io.py
 !!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
-2 errors in 0.48s
+2 errors in 0.59s
 + echo '[security-checks] pytest failed'
 [security-checks] pytest failed
 + echo '[security-checks] running Bandit (static scan)'
@@ -192,7 +192,7 @@ ERROR tests/test_storage_pattern_io.py
 [main]	INFO	cli include tests: None
 [main]	INFO	cli exclude tests: None
 [main]	INFO	running on Python 3.12.1
-Run started:2025-11-20 14:44:51.602333
+Run started:2025-11-25 20:14:05.742567+00:00
 
 Test results:
 	No issues identified.
@@ -217,99 +217,3 @@ Files skipped (0):
 + echo '[security-checks] running pip-audit'
 [security-checks] running pip-audit
 + /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip_audit --progress off
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-WARNING:cachecontrol.controller:Cache entry deserialization failed, entry ignored
-No known vulnerabilities found
-Name            Skip Reason
---------------- ------------------------------------------------------------------------------
-optical-storage Dependency not found on PyPI and could not be audited: optical-storage (0.1.1)
-+ echo '[security-checks] done'
-[security-checks] done
