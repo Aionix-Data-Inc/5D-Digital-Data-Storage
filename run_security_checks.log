@@ -107,8 +107,8 @@ Obtaining file:///workspaces/5D-Digital-Data-Storage
 Building wheels for collected packages: optical-storage
   Building editable for optical-storage (pyproject.toml): started
   Building editable for optical-storage (pyproject.toml): finished with status 'done'
-  Created wheel for optical-storage: filename=optical_storage-0.1.1-0.editable-py3-none-any.whl size=2969 sha256=91feb3125ad6d8367775326bcf231e94942148ad4f4c467c72b4f4e6bf45bef4
-  Stored in directory: /tmp/pip-ephem-wheel-cache-ialrm6op/wheels/ba/6a/4d/81e6420f1486392e70fea5a90581dc1754ca8f5f02e77dcc6e
+  Created wheel for optical-storage: filename=optical_storage-0.1.1-0.editable-py3-none-any.whl size=2969 sha256=9bb7eb55d65d243f1bb0959c2b88abe4f41e5f39657a8854ae7d26d0b39de9b1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-na95u7kb/wheels/ba/6a/4d/81e6420f1486392e70fea5a90581dc1754ca8f5f02e77dcc6e
 Successfully built optical-storage
 Installing collected packages: optical-storage
   Attempting uninstall: optical-storage
@@ -181,7 +181,7 @@ E   SyntaxError: invalid syntax
 ERROR tests/test_ecc_example.py
 ERROR tests/test_storage_pattern_io.py
 !!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
-2 errors in 0.57s
+2 errors in 0.50s
 + echo '[security-checks] pytest failed'
 [security-checks] pytest failed
 + echo '[security-checks] running Bandit (static scan)'
@@ -192,7 +192,7 @@ ERROR tests/test_storage_pattern_io.py
 [main]	INFO	cli include tests: None
 [main]	INFO	cli exclude tests: None
 [main]	INFO	running on Python 3.12.1
-Run started:2025-11-25 10:27:49.240731+00:00
+Run started:2025-11-25 17:39:57.414084+00:00
 
 Test results:
 	No issues identified.
