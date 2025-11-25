@@ -26,8 +26,8 @@
 ++ '[' linux-gnu = msys ']'
 ++ export VIRTUAL_ENV=/workspaces/5D-Digital-Data-Storage/.venv
 ++ VIRTUAL_ENV=/workspaces/5D-Digital-Data-Storage/.venv
-++ _OLD_VIRTUAL_PATH=/workspaces/5D-Digital-Data-Storage/.venv/bin:/usr/local/rvm/gems/ruby-3.4.1/bin:/usr/local/rvm/gems/ruby-3.4.1@global/bin:/usr/local/rvm/rubies/ruby-3.4.1/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/ac4cbdf48759c7d8c3eb91ffe6bb04316e263c57/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v22.21.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin:/home/codespace/.vscode-remote/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts
-++ PATH=/workspaces/5D-Digital-Data-Storage/.venv/bin:/workspaces/5D-Digital-Data-Storage/.venv/bin:/usr/local/rvm/gems/ruby-3.4.1/bin:/usr/local/rvm/gems/ruby-3.4.1@global/bin:/usr/local/rvm/rubies/ruby-3.4.1/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/ac4cbdf48759c7d8c3eb91ffe6bb04316e263c57/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v22.21.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin:/home/codespace/.vscode-remote/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts
+++ _OLD_VIRTUAL_PATH=/workspaces/5D-Digital-Data-Storage/.venv/bin:/usr/local/rvm/gems/ruby-3.4.1/bin:/usr/local/rvm/gems/ruby-3.4.1@global/bin:/usr/local/rvm/rubies/ruby-3.4.1/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v22.21.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin:/home/codespace/.vscode-remote/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts
+++ PATH=/workspaces/5D-Digital-Data-Storage/.venv/bin:/workspaces/5D-Digital-Data-Storage/.venv/bin:/usr/local/rvm/gems/ruby-3.4.1/bin:/usr/local/rvm/gems/ruby-3.4.1@global/bin:/usr/local/rvm/rubies/ruby-3.4.1/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v22.21.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin:/home/codespace/.vscode-remote/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts
 ++ export PATH
 ++ '[' -n '' ']'
 ++ '[' -z '' ']'
@@ -54,13 +54,13 @@ ERROR: Could not find a version that satisfies the requirement pip-audit==2.2.2 
 ERROR: No matching distribution found for pip-audit==2.2.2
 + /workspaces/5D-Digital-Data-Storage/.venv/bin/python3 -m pip install pytest bandit
 Requirement already satisfied: pytest in ./.venv/lib/python3.12/site-packages (9.0.1)
-Requirement already satisfied: bandit in ./.venv/lib/python3.12/site-packages (1.8.6)
+Requirement already satisfied: bandit in ./.venv/lib/python3.12/site-packages (1.9.2)
 Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.12/site-packages (from pytest) (2.3.0)
 Requirement already satisfied: packaging>=22 in ./.venv/lib/python3.12/site-packages (from pytest) (25.0)
 Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest) (1.6.0)
 Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest) (2.19.2)
 Requirement already satisfied: PyYAML>=5.3.1 in ./.venv/lib/python3.12/site-packages (from bandit) (6.0.3)
-Requirement already satisfied: stevedore>=1.20.0 in ./.venv/lib/python3.12/site-packages (from bandit) (5.5.0)
+Requirement already satisfied: stevedore>=1.20.0 in ./.venv/lib/python3.12/site-packages (from bandit) (5.6.0)
 Requirement already satisfied: rich in ./.venv/lib/python3.12/site-packages (from bandit) (14.2.0)
 Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.12/site-packages (from rich->bandit) (4.0.0)
 Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich->bandit) (0.1.2)
@@ -76,7 +76,7 @@ Requirement already satisfied: rich>=12.4 in ./.venv/lib/python3.12/site-package
 Requirement already satisfied: toml>=0.10 in ./.venv/lib/python3.12/site-packages (from pip-audit) (0.10.2)
 Requirement already satisfied: platformdirs>=4.2.0 in ./.venv/lib/python3.12/site-packages (from pip-audit) (4.5.0)
 Requirement already satisfied: license-expression<31,>=30 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (30.4.4)
-Requirement already satisfied: packageurl-python<2,>=0.11 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (0.17.5)
+Requirement already satisfied: packageurl-python<2,>=0.11 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (0.17.6)
 Requirement already satisfied: py-serializable<3.0.0,>=2.0.0 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (2.1.0)
 Requirement already satisfied: sortedcontainers<3.0.0,>=2.4.0 in ./.venv/lib/python3.12/site-packages (from cyclonedx-python-lib<10,>=5->pip-audit) (2.4.0)
 Requirement already satisfied: boolean.py>=4.0 in ./.venv/lib/python3.12/site-packages (from license-expression<31,>=30->cyclonedx-python-lib<10,>=5->pip-audit) (5.0)
@@ -107,8 +107,8 @@ Obtaining file:///workspaces/5D-Digital-Data-Storage
 Building wheels for collected packages: optical-storage
   Building editable for optical-storage (pyproject.toml): started
   Building editable for optical-storage (pyproject.toml): finished with status 'done'
-  Created wheel for optical-storage: filename=optical_storage-0.1.1-0.editable-py3-none-any.whl size=2817 sha256=3c1dcfa44a8522db04b068efdc0cd0cfb071c644322405869dc426c9bb266a56
-  Stored in directory: /tmp/pip-ephem-wheel-cache-rcrhnhri/wheels/ba/6a/4d/81e6420f1486392e70fea5a90581dc1754ca8f5f02e77dcc6e
+  Created wheel for optical-storage: filename=optical_storage-0.1.1-0.editable-py3-none-any.whl size=2969 sha256=91feb3125ad6d8367775326bcf231e94942148ad4f4c467c72b4f4e6bf45bef4
+  Stored in directory: /tmp/pip-ephem-wheel-cache-ialrm6op/wheels/ba/6a/4d/81e6420f1486392e70fea5a90581dc1754ca8f5f02e77dcc6e
 Successfully built optical-storage
 Installing collected packages: optical-storage
   Attempting uninstall: optical-storage
@@ -126,7 +126,7 @@ __________________ ERROR collecting tests/test_ecc_example.py __________________
     mod = import_path(
 .venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
     importlib.import_module(module_name)
-/usr/local/python/3.12.1/lib/python3.12/importlib/__init__.py:90: in import_module
+/home/codespace/.python/current/lib/python3.12/importlib/__init__.py:90: in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 <frozen importlib._bootstrap>:1387: in _gcd_import
@@ -143,7 +143,7 @@ __________________ ERROR collecting tests/test_ecc_example.py __________________
 .venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
     tree = ast.parse(source, filename=strfn)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-/usr/local/python/3.12.1/lib/python3.12/ast.py:52: in parse
+/home/codespace/.python/current/lib/python3.12/ast.py:52: in parse
     return compile(source, filename, mode, flags,
 E     File "/workspaces/5D-Digital-Data-Storage/tests/test_ecc_example.py", line 32
 E       *** End Patch
@@ -154,7 +154,7 @@ ______________ ERROR collecting tests/test_storage_pattern_io.py _______________
     mod = import_path(
 .venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
     importlib.import_module(module_name)
-/usr/local/python/3.12.1/lib/python3.12/importlib/__init__.py:90: in import_module
+/home/codespace/.python/current/lib/python3.12/importlib/__init__.py:90: in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 <frozen importlib._bootstrap>:1387: in _gcd_import
@@ -171,7 +171,7 @@ ______________ ERROR collecting tests/test_storage_pattern_io.py _______________
 .venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test
     tree = ast.parse(source, filename=strfn)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-/usr/local/python/3.12.1/lib/python3.12/ast.py:52: in parse
+/home/codespace/.python/current/lib/python3.12/ast.py:52: in parse
     return compile(source, filename, mode, flags,
 E     File "/workspaces/5D-Digital-Data-Storage/tests/test_storage_pattern_io.py", line 26
 E       *** End Patch
@@ -192,7 +192,7 @@ ERROR tests/test_storage_pattern_io.py
 [main]	INFO	cli include tests: None
 [main]	INFO	cli exclude tests: None
 [main]	INFO	running on Python 3.12.1
-Run started:2025-11-17 11:25:07.432195
+Run started:2025-11-25 10:27:49.240731+00:00
 
 Test results:
 	No issues identified.

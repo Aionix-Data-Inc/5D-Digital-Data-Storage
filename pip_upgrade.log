@@ -1,0 +1,3 @@
+Requirement already satisfied: pip in ./.venv/lib/python3.12/site-packages (25.3)
+Requirement already satisfied: setuptools in ./.venv/lib/python3.12/site-packages (80.9.0)
+Requirement already satisfied: wheel in ./.venv/lib/python3.12/site-packages (0.45.1)

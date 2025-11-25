@@ -1,0 +1,21 @@
+Obtaining file:///workspaces/5D-Digital-Data-Storage
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: optical-storage
+  Building editable for optical-storage (pyproject.toml): started
+  Building editable for optical-storage (pyproject.toml): finished with status 'done'
+  Created wheel for optical-storage: filename=optical_storage-0.1.1-0.editable-py3-none-any.whl size=2969 sha256=1b92078dd68982a4c99eddf1f91ac8c19ed352da88fef84471abd83bc8e64bbe
+  Stored in directory: /tmp/pip-ephem-wheel-cache-30wpzf8i/wheels/ba/6a/4d/81e6420f1486392e70fea5a90581dc1754ca8f5f02e77dcc6e
+Successfully built optical-storage
+Installing collected packages: optical-storage
+  Attempting uninstall: optical-storage
+    Found existing installation: optical-storage 0.1.1
+    Uninstalling optical-storage-0.1.1:
+      Successfully uninstalled optical-storage-0.1.1
+Successfully installed optical-storage-0.1.1
