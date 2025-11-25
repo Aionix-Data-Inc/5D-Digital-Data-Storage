@@ -60,4 +60,4 @@ E   SyntaxError: invalid syntax
 ERROR tests/test_ecc_example.py
 ERROR tests/test_storage_pattern_io.py
 !!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
-2 errors in 0.58s
+2 errors in 0.65s
