@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-04-13T05:16:01.031472",
+  "device_id": "default_device",
+  "media_batch_id": "default_batch",
+  "operation_type": "write",
+  "payload_hash": "93516db68dc5247c4079b6443d6f2338cba3272ad31746af09456b82df6368b6",
+  "pattern_hash": "e99ad8912235fddaa420e434afeb2a59731f9c5138c490d4577467ac4570e44a",
+  "previous_log_hash": "1c82037873e3765746bf3c0586e545f9a908f614e080f2b380892519351ca6a3",
+  "log_hash": "20ee9bf8882d52b50683cab1c53e8f323a4eb22da12f8e11f1f6b67b3ed9f047",
+  "metadata": {
+    "grid_size": [
+      16,
+      16,
+      2
+    ],
+    "data_length_bytes": 10,
+    "encoding_version": "2.0"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "device_id": "device_001",
+  "media_batch_id": "media_lot_2024",
+  "timestamp": "2026-04-12T20:03:39.074495",
+  "intensity_calibration": {
+    "0": 0.3766666666666667
+  },
+  "polarization_calibration": {
+    "0": 0.01,
+    "3": 0.14158999999999988,
+    "1": 0.05719666666666656
+  },
+  "distortion_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "aberration_corrections": {},
+  "ml_model_version": "",
+  "ml_accuracy_history": [],
+  "ml_training_samples": 0,
+  "write_success_rate": 0.9,
+  "read_accuracy": 0.96,
+  "error_rate_history": [
+    0.02,
+    0.025,
+    0.03
+  ]
+}
