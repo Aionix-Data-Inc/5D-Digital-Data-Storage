@@ -4,13 +4,24 @@ from __future__ import annotations
 
 import pathlib
 import sys
+import math
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parents[1]
 SRC_PATH = REPO_ROOT / "src"
 if str(SRC_PATH) not in sys.path:
     sys.path.insert(0, str(SRC_PATH))
 
-from optical_storage import Hamming74, LaserReader, LaserWriter
+from optical_storage import (
+    Hamming74, 
+    LaserReader, 
+    LaserWriter,
+    acquire_polarization_resolved_images,
+    denoise_images,
+    enhance_contrast,
+    correct_alignment,
+    extract_voxel_features,
+    cluster_and_reconstruct_grid,
+)
 from optical_storage.noise import apply_gaussian_noise
 
 
@@ -32,11 +43,29 @@ def main() -> None:
     for key, value in pattern.summary().items():
         print(f"{key:24s}: {value}")
 
-    # Simulate measurement noise
-    noisy_voxels = apply_gaussian_noise(pattern, intensity_std=0.005, polarization_std=0.005, seed=7)
+    # Simulate image acquisition with polarization-resolved imaging
+    angles = [i * math.pi / 4 for i in range(8)]  # 8 angles
+    images = acquire_polarization_resolved_images(pattern, angles, noise_std=0.02, seed=7)
+    print(f"\n--- Image acquisition ---")
+    print(f"Acquired {len(images)} polarization-resolved images")
 
+    # Preprocess images
+    images = denoise_images(images, kernel_size=3)
+    images = enhance_contrast(images)
+    images = correct_alignment(images)
+    print("Applied preprocessing: denoising, contrast enhancement, alignment correction")
+
+    # Extract voxel features
+    features = extract_voxel_features(images)
+    print(f"Extracted {len(features)} voxel features")
+
+    # Cluster and reconstruct voxel grid
+    reconstructed_voxels = cluster_and_reconstruct_grid(features, threshold=0.1)
+    print(f"Reconstructed {len(reconstructed_voxels)} voxels from features")
+
+    # Read from reconstructed voxels
     reader = LaserReader(pattern)
-    result = reader.read(noisy_voxels)
+    result = reader.read(reconstructed_voxels)
 
     print("\n--- Read phase ---")
     print(f"Recovered payload       : {result.data!r}")

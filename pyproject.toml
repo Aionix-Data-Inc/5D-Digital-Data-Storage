@@ -24,3 +24,4 @@ Homepage = "https://example.com/5d-digital-data-storage"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
+testpaths = ["tests"]

@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Sequence, Tuple
 
 from .error_correction import ErrorCorrectionScheme
 from .voxel import Voxel
 from .error_correction import NoErrorCorrection, Hamming74, Parity8
+from .versioning import VersionInfo, EncodingVersion
 
 
 @dataclass
@@ -28,6 +30,9 @@ class StoragePattern:
     error_correction: ErrorCorrectionScheme = field(repr=False)
     error_correction_metadata: Dict[str, Any] = field(default_factory=dict)
     data_length_bytes: int = 0
+    data_hash: str = ""
+    version_info: Optional[VersionInfo] = None
+    write_log_hash: Optional[str] = None
 
     def capacity_bits(self) -> int:
         """Return the total raw capacity (without ECC) in bits."""
@@ -53,6 +58,93 @@ class StoragePattern:
             "error_correction_metadata": self.error_correction_metadata,
             "data_length_bytes": self.data_length_bytes,
             "voxel_count": self.voxel_count,
+            "data_hash": self.data_hash,
+            "encoding_version": self.version_info.encoding_version.value if self.version_info else "unknown",
+            "firmware_version": self.version_info.firmware_version if self.version_info else "unknown",
+            "write_log_hash": self.write_log_hash,
+        }
+
+    def compare_voxel_states(
+        self,
+        observed_voxels: Sequence[Voxel],
+        intensity_tolerance: float = 0.05,
+        polarization_tolerance: float = 0.05,
+        max_differences: int = 50,
+    ) -> Dict[str, Any]:
+        """Compare expected voxel states with observed measurements."""
+        expected_by_coord = {(v.x, v.y, v.z): v for v in self.voxels}
+        observed_by_coord = {(v.x, v.y, v.z): v for v in observed_voxels}
+        common_coords = set(expected_by_coord) & set(observed_by_coord)
+        missing_coords = set(expected_by_coord) - set(observed_by_coord)
+        extra_coords = set(observed_by_coord) - set(expected_by_coord)
+
+        matched = 0
+        differences: List[Dict[str, Any]] = []
+        total_intensity_error = 0.0
+        total_polarization_error = 0.0
+
+        for coord in common_coords:
+            expected = expected_by_coord[coord]
+            observed = observed_by_coord[coord]
+            intensity_error = abs(expected.intensity - observed.intensity)
+            polarization_error = abs(expected.polarization - observed.polarization)
+            total_intensity_error += intensity_error
+            total_polarization_error += polarization_error
+            is_match = intensity_error <= intensity_tolerance and polarization_error <= polarization_tolerance
+            if is_match:
+                matched += 1
+            else:
+                if len(differences) < max_differences:
+                    differences.append({
+                        "coordinate": coord,
+                        "expected_intensity": expected.intensity,
+                        "observed_intensity": observed.intensity,
+                        "intensity_error": intensity_error,
+                        "expected_polarization": expected.polarization,
+                        "observed_polarization": observed.polarization,
+                        "polarization_error": polarization_error,
+                        "reason": "threshold_exceeded",
+                    })
+
+        for coord in missing_coords:
+            if len(differences) < max_differences:
+                differences.append({
+                    "coordinate": coord,
+                    "reason": "missing_observation",
+                })
+
+        for coord in extra_coords:
+            if len(differences) < max_differences:
+                observed = observed_by_coord[coord]
+                differences.append({
+                    "coordinate": coord,
+                    "observed_intensity": observed.intensity,
+                    "observed_polarization": observed.polarization,
+                    "reason": "extra_observation",
+                })
+
+        average_intensity_error = (
+            total_intensity_error / len(common_coords)
+            if common_coords
+            else 0.0
+        )
+        average_polarization_error = (
+            total_polarization_error / len(common_coords)
+            if common_coords
+            else 0.0
+        )
+
+        return {
+            "total_expected": len(expected_by_coord),
+            "total_observed": len(observed_by_coord),
+            "common_voxels": len(common_coords),
+            "missing_voxels": len(missing_coords),
+            "extra_voxels": len(extra_coords),
+            "matched_voxels": matched,
+            "mismatched_voxels": len(common_coords) - matched,
+            "average_intensity_error": average_intensity_error,
+            "average_polarization_error": average_polarization_error,
+            "differences": differences,
         }
 
     # ------------------------------------------------------------------
@@ -87,6 +179,9 @@ class StoragePattern:
             "error_correction": getattr(self.error_correction, "name", "none"),
             "error_correction_metadata": dict(self.error_correction_metadata),
             "data_length_bytes": int(self.data_length_bytes),
+            "data_hash": self.data_hash,
+            "version_info": self.version_info.to_dict() if self.version_info else None,
+            "write_log_hash": self.write_log_hash,
         }
 
     @classmethod
@@ -130,4 +225,7 @@ class StoragePattern:
             error_correction=ecc,
             error_correction_metadata=dict(data.get("error_correction_metadata", {})),
             data_length_bytes=int(data.get("data_length_bytes", 0)),
+            data_hash=data.get("data_hash", ""),
+            version_info=VersionInfo.from_dict(data["version_info"]) if data.get("version_info") else None,
+            write_log_hash=data.get("write_log_hash"),
         )

@@ -23,4 +23,3 @@ def test_storage_pattern_roundtrip_json() -> None:
     assert restored.intensity_levels == pattern.intensity_levels
     assert restored.polarization_states == pattern.polarization_states
     assert restored.data_length_bytes == pattern.data_length_bytes
-*** End Patch

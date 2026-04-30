@@ -8,7 +8,12 @@ import math
 
 @dataclass(frozen=True)
 class Voxel:
-    """Single storage voxel in nanostructured glass."""
+    """Single storage voxel in nanostructured glass.
+
+    The voxel encodes a 3D position plus optical properties:
+    - retardance (δ) stored as `intensity`
+    - slow-axis orientation (θ) stored as `polarization`
+    """
 
     x: int
     y: int
@@ -29,3 +34,13 @@ class Voxel:
         if not (0 <= self.polarization <= 3.14159265358979323846 * 2):
             # Polarization angle is typically in radians. We allow up to 2pi.
             raise ValueError("polarization angle should be within [0, 2*pi]")
+
+    @property
+    def retardance(self) -> float:
+        """Alias for the optical retardance encoded in the voxel."""
+        return self.intensity
+
+    @property
+    def orientation(self) -> float:
+        """Alias for the slow-axis orientation encoded in the voxel."""
+        return self.polarization

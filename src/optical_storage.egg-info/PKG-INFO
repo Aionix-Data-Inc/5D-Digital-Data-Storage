@@ -22,6 +22,7 @@ This repository contains a Python simulation of a five-dimensional (3D position,
 
 * `LaserWriter` – maps byte streams onto a 3D voxel lattice using configurable intensity/polarization quantisation and forward-error correction.
 * `LaserReader` – reconstructs the original payload from measured voxels, applying quantisation and decoding.
+* Image Processing Pipeline – simulates acquiring polarization-resolved images, preprocessing (denoising, contrast enhancement, alignment), feature extraction, and voxel grid reconstruction.
 * Hamming(7,4) and passthrough error-correction implementations.
 * Noise helpers to simulate laser writing/reading imperfections.
 * Example script demonstrating an end-to-end round-trip with noise.
@@ -70,6 +71,37 @@ Corrected single-bit errs: 0
 Detected uncorrectable  : 0
 Voxels processed        : 56
 ```
+
+## Image Processing Pipeline
+
+The repository now includes a simulated image processing pipeline for polarization-resolved optical data storage reading:
+
+1. **Acquire polarization-resolved images**: Simulate capturing images at different polarization angles from the storage pattern.
+2. **Preprocess**: Apply denoising, contrast enhancement, and alignment correction to the images.
+3. **Extract voxel features**: Analyze polarization responses to extract position, intensity (δ), and polarization angle (θ) features.
+4. **Cluster + reconstruct voxel grid**: Group features and reconstruct the 3D voxel lattice.
+
+Example usage:
+
+```python
+from optical_storage import (
+    acquire_polarization_resolved_images,
+    denoise_images,
+    enhance_contrast,
+    extract_voxel_features,
+    cluster_and_reconstruct_grid,
+)
+
+# After writing a pattern
+images = acquire_polarization_resolved_images(pattern, angles=[0, π/4, π/2, ...])
+images = denoise_images(images)
+images = enhance_contrast(images)
+features = extract_voxel_features(images)
+voxels = cluster_and_reconstruct_grid(features)
+# Then read with LaserReader
+```
+
+See `examples/simulate_storage.py` for a full example including the image processing pipeline.
 
 ## Running Tests
 

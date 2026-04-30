@@ -29,4 +29,3 @@ def test_roundtrip_with_parity8() -> None:
     reader = LaserReader(pattern)
     result = reader.read()
     assert result.data == payload
-*** End Patch
