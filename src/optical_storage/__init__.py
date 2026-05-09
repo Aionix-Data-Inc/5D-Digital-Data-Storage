@@ -17,6 +17,11 @@ from .image_processing import (
     correct_alignment,
     extract_voxel_features,
     cluster_and_reconstruct_grid,
+    compute_image_integrity_hash,
+    verify_image_integrity,
+    process_polarization_image_pipeline,
+    ImageProcessingResult,
+    ImageProcessingError,
     PolarizationImage,
     VoxelFeature,
 )
@@ -50,6 +55,11 @@ __all__ = [
     "correct_alignment",
     "extract_voxel_features",
     "cluster_and_reconstruct_grid",
+    "compute_image_integrity_hash",
+    "verify_image_integrity",
+    "process_polarization_image_pipeline",
+    "ImageProcessingResult",
+    "ImageProcessingError",
     "PolarizationImage",
     "VoxelFeature",
 ]
